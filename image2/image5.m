@@ -4,12 +4,12 @@ K=imadd(I,J);
 X=imsubtract(I,J);
 Y=immultiply(I,J);
 Z=imdivide(I,J);
-subplot(321);imshow(I); title('ԭͼ'); 
-subplot(322);imshow(J); title('ԭͼ');
-subplot(323);imshow(K); title('�ӷ�'); 
-subplot(324);imshow(X); title('����');
-subplot(325);imshow(Y); title('�˷�'); 
-subplot(326);imshow(Z); title('����');
+subplot(321);imshow(I); title('原图'); 
+subplot(322);imshow(J); title('原图2');
+subplot(323);imshow(K); title('两幅图加法'); 
+subplot(324);imshow(X); title('两幅图减法');
+subplot(325);imshow(Y); title('两幅图乘法'); 
+subplot(326);imshow(Z); title('两幅图除法');
 
 I=imfinfo('11.jpg')
 J=imfinfo('12.jpg')

@@ -1,33 +1,33 @@
 clear all;
-D0 = 20;%¶¨Òå³õÖµÎª20
-I = imread('cameraman.tif');
+D0 = 20; % å®šä¹‰åˆå§‹å€¼
+I = imread('dctcomp.jpg');
 F = fft2(I);
 F2 = fftshift(F);
 subplot(231);
 imshow(I);
-title('Ô­Í¼');
+title('åŸå›¾');
 subplot(232);
 imshow(log(abs(F) + 1),[0 10]);
-title('2D-FFTÂË²¨Ç°');
+title('2D-FFTæ»¤æ³¢å‰');
 subplot(233);
 H1=zeros(256);
-H1(D0:256-D0,D0:256-D0)=1;%½«256-20 Í¼Ïñ¾ØÕóÖÃÒ»
-F3=F.*H1;%¸ßÍ¨ÂË²¨
+H1(D0:256-D0,D0:256-D0)=1; % å°† 256-20 å›¾åƒçŸ©é˜µç½®1
+F3=F.*H1; % é«˜é€šæ»¤æ³¢
 imshow(log(abs(F3) + 1),[0 10]);
-title('2D-FFT¸ßÍ¨ÂË²¨ºó');
+title('2D-FFTé«˜é€šæ»¤æ³¢å');
 subplot(234);
 IF1 = ifft2(F3);
 IF1 = uint8(IF1);
 imshow(IF1);
-title('¸ßÍ¨ÂË²¨ºóIFFT2');
+title('é«˜é€šæ»¤æ³¢åIFFT2');
 subplot(235);
 H2=ones(256);
 H2(D0:256-D0,D0:256-D0)=0;
 F4=F.*H2;
 imshow(log(abs(F4) + 1),[0 10]);
-title('2D-FFTµÍÍ¨ÂË²¨ºó');
+title('2D-FFTä½é€šæ»¤æ³¢å');
 subplot(236);
 IF2 = ifft2(F4);
 IF2 = uint8(IF2);
 imshow(IF2);
-title('µÍÍ¨ÂË²¨ºóIFFT2');
+title('ä½é€šæ»¤æ³¢åIFFT2');

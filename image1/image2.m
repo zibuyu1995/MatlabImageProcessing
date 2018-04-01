@@ -1,15 +1,15 @@
 close;clear;clc;
 I = imread('redbloodcell.tif');
-T = histeq(I);%Ö±·½Í¼¾ùºâ»¯
+T = histeq(I); %Ö± ç›´æ–¹å›¾å‡è¡¡åŒ–
 subplot(221);
 imshow(I);
-title('ĞŞÕıÇ°Í¼Ïñ');
+title('ä¿®æ­£å‰å›¾åƒ');
 subplot(222);
 imshow(T);
-title('ĞŞÕıºóÍ¼Ïñ');
+title('ä¿®æ­£åå›¾åƒ');
 subplot(223);
 imhist(I);
-title('ĞŞÕıÇ°Ö±·½Í¼');
+title('ä¿®æ­£å‰ç›´æ–¹å›¾');
 subplot(224);
 imhist(T);
-title('ĞŞÕıºóÖ±·½Í¼');
+title('ä¿®æ­£åç›´æ–¹å›¾');
